@@ -173,7 +173,8 @@ class GuiHandler {
     const messageDiv = this.container.firstElementChild;
     const tasklistDiv = this.container.lastElementChild;
     const numTasks = tasklistDiv.querySelectorAll("tbody > tr").length;
-    numTasks >= 0
+
+    numTasks <= 0
       ? (messageDiv.textContent = "Waiting for server data...")
       : (messageDiv.textContent = `Found ${numTasks} tasks.`);
   }
@@ -188,7 +189,7 @@ class GuiHandler {
     const thead = table.createTHead();
     const tbody = document.createElement("tbody");
     const headerRow = document.createElement("tr");
-    headerRow.classList.toggle("hline")
+    thead.classList.toggle("hline")
     const taskHeader = document.createElement("th");
     const statusHeader = document.createElement("th");
 
