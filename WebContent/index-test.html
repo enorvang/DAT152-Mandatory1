@@ -15,14 +15,34 @@
 <body>
 
   <!--First list of tasks-->
-  <div id="taskcontainer">
+  <div id="taskcontainer1">
+    <div class="message"><p>Waiting for server data.</p></div>
+    <div class="newtask"><button type="button" disabled>New task</button></div>
+    <div class="tasklist"></div>
+</div>
+
+<!--Second list of tasks-->
+<div id="taskcontainer2">
     <div class="message"><p>Waiting for server data.</p></div>
     <div class="newtask"><button type="button" disabled>New task</button></div>
     <div class="tasklist"></div>
 </div>
 
 <!-- First Modal -->
-<div id="taskbox" class="modal">
+<div id="taskbox1" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <table>
+            <tr><th>Title:</th><td><input type="text" size="25" maxlength="80"/></td></tr>
+            <tr><th>Status:</th><td><select></select></td></tr>
+        </table>
+        <p><button type="submit">Add task</button></p>
+    </div>
+</div>
+
+<!-- Second Modal -->
+<div id="taskbox2" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
         <span class="close">&times;</span>
